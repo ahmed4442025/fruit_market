@@ -7,6 +7,7 @@ class CacheGet {
     _getSetNotifyAcc();
     _getSetNotifyProm();
     _getSetLang();
+    _getSetAdr();
   }
 
   // ---------- on boarding view (skip) ----------
@@ -59,6 +60,19 @@ class CacheGet {
   // set
   static void setSetLang(String setLang) {
     CacheHelper.setString(key: CacheStrings.setLang, value: setLang);
+  }
+
+  // -------- setting Address
+  static late final String setAdr;
+
+  // get
+  static void _getSetAdr() {
+    setAdr = CacheHelper.getString(key: CacheStrings.setAdr) ?? '';
+  }
+
+  // set
+  static void setSetAdr(String setAdr) {
+    CacheHelper.setString(key: CacheStrings.setAdr, value: setAdr);
   }
 
 }

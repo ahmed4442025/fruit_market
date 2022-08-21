@@ -33,7 +33,8 @@ class MyAccountView extends StatelessWidget {
               profile(),
               ...sett(Icons.shopping_bag, 'My Orders'),
               ...sett(Icons.favorite, 'Favourites'),
-              ...sett(Icons.settings, 'Settings'),
+              ...sett(Icons.settings, 'Settings',
+                  onTap: () => ViewsManager.openWBSettPub(_context)),
               ...sett(Icons.shopping_cart, 'My Cart'),
               ...sett(Icons.groups, 'Rate us'),
               ...sett(Icons.share, 'Refer a Friend'),
@@ -87,11 +88,7 @@ class MyAccountView extends StatelessWidget {
       );
 
   List<Widget> sett(IconData icon, String name, {VoidCallback? onTap}) => [
-        // UtilM.box5(),
         UtilM.iconButton(_context, onTap ?? () {}, icon, name),
         Divider(),
-        // Column(
-        //   crossAxisAlignment: ,
-        // )
       ];
 }

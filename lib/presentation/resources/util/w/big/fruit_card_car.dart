@@ -21,7 +21,7 @@ class FruitCardCar extends StatelessWidget {
           image(),
           UtilM.box10(),
           info(context),
-          Spacer(),
+          const Spacer(),
           addToCard()
         ],
       ),
@@ -29,46 +29,56 @@ class FruitCardCar extends StatelessWidget {
   }
 
   Widget image() => ClipRRect(
-    borderRadius: BorderRadius.circular(AppPadding.p5),
-    child: Image.asset(
-      fruitModel.img ?? '',
-      height: AppSize.s100,
-      width: AppSize.s100,
-      fit: BoxFit.cover,
-    ),
-  );
+        borderRadius: BorderRadius.circular(AppPadding.p5),
+        child: Image.asset(
+          fruitModel.img ?? '',
+          height: AppSize.s100,
+          width: AppSize.s100,
+          fit: BoxFit.cover,
+        ),
+      );
 
   Widget info(context) => SizedBox(
-    width: 150,
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(fruitModel.name ?? ''),
-        Text(
-          'Pick up from organic farms',
-          style: AllStyles.text(context).bodySmall,
+        width: 150,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Text(fruitModel.name ?? ''),
+                  Text('   rs 40 Saved',
+                      style: AllStyles.text(context)
+                          .bodySmall
+                          ?.copyWith(color: ColorManager.lightGreen)),
+                ],
+              ),
+            ),
+            Text(
+              'rs 190',
+              style: AllStyles.text(context)
+                  .bodySmall
+                  ?.copyWith(decoration: TextDecoration.lineThrough),
+            ),
+            Text('${fruitModel.price} per/kg'),
+          ],
         ),
-        UtilM.rateFruit(rate: fruitModel.rate ?? 0),
-        UtilM.counter(onChange: (i) {
-          fruitCount = i;
-        }),
-      ],
-    ),
-  );
+      );
 
   Widget addToCard() => Column(
-    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    children: [
-      Text('${fruitModel.price} per/kg'),
-      UtilM.buttonText(
-          text: "add",
-          onTap: () {
-            print('buy $fruitCount ${fruitModel.name}');
-          },
-          width: 80,
-          height: 40,
-          clr: ColorManager.orange)
-    ],
-  );
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          InkWell(
+              onTap: () {
+                print('delete ${fruitModel.name}');
+              },
+              child: const Icon(Icons.delete_forever)),
+          UtilM.counter(onChange: (i) {
+            fruitCount = i;
+          }),
+        ],
+      );
 }

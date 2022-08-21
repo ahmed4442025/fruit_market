@@ -68,6 +68,7 @@ class AppCubit extends Cubit<AppStates> {
   }
 
   // ======= home scr ===========
+
   late List<FruitType> fruitTypes;
   late List<GroupModel> groupOfFruits;
   int indexOfFruitType = 0;
@@ -96,6 +97,7 @@ class AppCubit extends Cubit<AppStates> {
   late bool setNotifyAcc;
   late bool setNotifyProm;
   late String selectedLang;
+  late String setAddress;
   List<String> langs = ['AR', 'EN', 'FR'];
 
   // init settings
@@ -103,6 +105,7 @@ class AppCubit extends Cubit<AppStates> {
     setNotifyAcc = CacheGet.setNotifyAcc;
     setNotifyProm = CacheGet.setNotifyProm;
     selectedLang = CacheGet.setLang;
+    setAddress = CacheGet.setAdr;
   }
 
   //notify
@@ -126,9 +129,19 @@ class AppCubit extends Cubit<AppStates> {
       emit(AppChangeSettingState());
     }
   }
+
+  // Address
+  void changeAdr(String? value) {
+    if (value != null){
+      setAddress = value;
+      CacheGet.setSetAdr(setAddress);
+      emit(AppChangeSettingState());
+    }
+  }
+
+
   // profile
   UserModel user = FruitData.userModel;
-
 }
 
 class _NavItem {

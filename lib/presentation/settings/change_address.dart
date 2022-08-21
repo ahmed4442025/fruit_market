@@ -11,6 +11,7 @@ class SettingsAddressView extends StatelessWidget {
   SettingsAddressView({Key? key}) : super(key: key);
   late BuildContext _context;
   late AppCubit _cubit;
+  TextEditingController ctrAdr = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +20,7 @@ class SettingsAddressView extends StatelessWidget {
       builder: (BuildContext context, state) {
         _context = context;
         _cubit = AppCubit.get(context);
+        ctrAdr.text = _cubit.setAddress;
         return myScaffold();
       },
     );
@@ -40,14 +42,17 @@ class SettingsAddressView extends StatelessWidget {
                 style: AllStyles.text(_context).bodyLarge,
               ),
               UtilM.box15(),
-               TextField(
+              TextField(
+                controller: ctrAdr,
                 keyboardType: TextInputType.multiline,
                 maxLines: 6,
                 style: AllStyles.text(_context).headlineMedium,
               ),
               UtilM.box100(),
               UtilM.buttonText(
-                  text: "Change", onTap: () {}, width: double.infinity)
+                  text: "Change",
+                  onTap: () => _cubit.changeAdr(ctrAdr.text),
+                  width: double.infinity)
             ],
           ),
         ),
