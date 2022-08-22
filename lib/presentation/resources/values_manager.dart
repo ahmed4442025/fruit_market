@@ -38,6 +38,7 @@ class AppSize{
   static const double s60 = 60;
   static const double s90 = 90;
   static const double s100 = 100;
+  static const double s120 = 120;
 
 
   // fruit card and groups

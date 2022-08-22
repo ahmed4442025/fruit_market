@@ -63,6 +63,10 @@ class ViewsManager {
     _openViewWithBack(context, Routes.settingNotify);
   }
 
+  static void openWBNotifyView(context) {
+    _openViewWithBack(context, Routes.notifyViewRout);
+  }
+
   // ==========
   static void _openViewNoBack(context, nextPage) {
     Navigator.pushReplacementNamed(context, nextPage);

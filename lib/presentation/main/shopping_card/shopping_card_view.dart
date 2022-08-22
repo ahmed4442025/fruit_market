@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_market/presentation/resources/all_styles.dart';
 import 'package:fruit_market/presentation/resources/font_manager.dart';
+import 'package:fruit_market/presentation/resources/values_manager.dart';
 import 'package:fruit_market/presentation/resources/views_sort_manager.dart';
 import '../../../app/functions/cubits/app/app_cubit.dart';
 import '../../../app/functions/cubits/app/app_states.dart';
@@ -27,7 +28,7 @@ class ShoppingCardView extends StatelessWidget {
   Scaffold myScaffold() => Scaffold(
         appBar: UtilM.appBar(showNotification: false, name: 'ShoppingCard'),
         body: Padding(
-          padding: const EdgeInsets.all(14.0),
+          padding: const EdgeInsets.all(AppPadding.p14),
           child: Column(
             children: [
               address(),
@@ -43,7 +44,7 @@ class ShoppingCardView extends StatelessWidget {
         itemCount: _cubit.groupOfFruits[1].list.length,
         itemBuilder: (c, i) =>
             UtilM.fruitCardCar(_cubit.groupOfFruits[1].list[i]),
-        separatorBuilder: (cs, i) => const Divider(height: 30),
+        separatorBuilder: (cs, i) => const Divider(height: AppSize.s30),
       );
 
   Widget address() => Row(

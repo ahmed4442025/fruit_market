@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_market/app/functions/shared/cache_manager.dart';
 import 'package:fruit_market/data/fake_data/fruit_list.dart';
 import 'package:fruit_market/data/models/fruit_model.dart';
+import 'package:fruit_market/data/models/notify_group.dart';
 import 'package:fruit_market/data/models/user_mode.dart';
 import 'package:fruit_market/presentation/main/favourite/favourite_view.dart';
 import 'package:fruit_market/presentation/main/home/home_view.dart';
@@ -11,7 +12,6 @@ import 'package:fruit_market/presentation/main/my_account/my_account.dart';
 import 'package:fruit_market/presentation/main/shopping_card/shopping_card_view.dart';
 
 import '../../../../data/models/fruit_type.dart';
-import '../../../../presentation/login/login_view.dart';
 import 'app_states.dart';
 import 'package:fruit_market/data/models/group_model.dart';
 
@@ -27,6 +27,7 @@ class AppCubit extends Cubit<AppStates> {
     fruitTypes = FruitData.fruitTypes;
     groupOfFruits = FruitData.groups;
     currentFruitCard = groupOfFruits[0].list[0];
+    notify = FruitData.notifyGroup;
   }
 
   // nav bar
@@ -121,9 +122,10 @@ class AppCubit extends Cubit<AppStates> {
     CacheGet.setSetNotifyProm(setNotifyProm);
     emit(AppChangeSettingState());
   }
+
   // lang
   void changeLang(String? value) {
-    if (value != null){
+    if (value != null) {
       selectedLang = value;
       CacheGet.setSetLang(selectedLang);
       emit(AppChangeSettingState());
@@ -132,16 +134,18 @@ class AppCubit extends Cubit<AppStates> {
 
   // Address
   void changeAdr(String? value) {
-    if (value != null){
+    if (value != null) {
       setAddress = value;
       CacheGet.setSetAdr(setAddress);
       emit(AppChangeSettingState());
     }
   }
 
-
   // profile
   UserModel user = FruitData.userModel;
+
+// ======= Notify scr ===========
+  late List<NotifyGroup> notify;
 }
 
 class _NavItem {

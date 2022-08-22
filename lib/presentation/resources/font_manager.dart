@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FontConstant{
-  static const fontFamily = "Montserrat";
+  static const fontFamily = "Poppins";
 }
 
 class FontWeightManager{

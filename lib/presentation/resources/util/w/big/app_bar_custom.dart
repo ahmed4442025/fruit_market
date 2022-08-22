@@ -7,21 +7,26 @@ class AppBarCustom {
   final int notificationCount;
   final String name;
   final VoidCallback? onBack;
+  final VoidCallback? onNotify;
 
   const AppBarCustom(
       {Key? key,
       required this.showNotification,
       required this.notificationCount,
       required this.name,
-      required this.onBack});
+      required this.onBack,
+      required this.onNotify});
 
   appBar() => AppBar(
       title: Text(name),
       actions: [
         if (showNotification)
-          _NamedIcon(
-            iconData: Icons.notifications,
-            notificationCount: notificationCount,
+          InkWell(
+            onTap: onNotify,
+            child: _NamedIcon(
+              iconData: Icons.notifications,
+              notificationCount: notificationCount,
+            ),
           )
       ],
       // back
@@ -64,17 +69,18 @@ class _NamedIcon extends StatelessWidget {
           children: [
             Icon(iconData),
             if (notificationCount != 0)
-            Positioned(
-              top: 7,
-              right: 5,
-              child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                decoration: const BoxDecoration(
-                    shape: BoxShape.circle, color: Colors.red),
-                alignment: Alignment.center,
-                child: Text('$notificationCount'),
-              ),
-            )
+              Positioned(
+                top: 7,
+                right: 5,
+                child: Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.circle, color: Colors.red),
+                  alignment: Alignment.center,
+                  child: Text('$notificationCount'),
+                ),
+              )
           ],
         ),
       ),

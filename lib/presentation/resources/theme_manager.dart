@@ -66,7 +66,9 @@ class ThemeManager {
           bodyMedium: StylesManager.getMediumStyle(
               color: ColorManager.lightBlack, fontSize: FontSizeManager.s16),
           bodySmall: StylesManager.getRegularStyle(
-              color: ColorManager.lightBlack, fontSize: FontSizeManager.s12),
+              color: ColorManager.lightBlack, fontSize: FontSizeManager.s14),
+          labelSmall: StylesManager.getRegularStyle(
+              color: ColorManager.grey1, fontSize: FontSizeManager.s12),
         ),
         // ------------ input decoration theme (text form field) ------------
         inputDecorationTheme: InputDecorationTheme(

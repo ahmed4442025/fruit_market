@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_market/presentation/resources/util/util_manager.dart';
 import 'package:fruit_market/presentation/resources/values_manager.dart';
+import 'package:fruit_market/presentation/resources/views_sort_manager.dart';
 import '../../../app/functions/cubits/app/app_cubit.dart';
 import '../../../app/functions/cubits/app/app_states.dart';
 
@@ -35,7 +36,10 @@ class HomeNavView extends StatelessWidget {
       // app bar
       appBar: PreferredSize(
           preferredSize: const Size.fromHeight(AppSize.s90),
-          child: UtilM.appBar(name: 'home', notificationCount: 3)),
+          child: UtilM.appBar(
+              name: 'home',
+              notificationCount: 3,
+              onNotify: () => ViewsManager.openWBNotifyView(_context))),
       // body
       body: ListView.builder(
           itemCount: _cubit.groupOfFruits.length + 1,

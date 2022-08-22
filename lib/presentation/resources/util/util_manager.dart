@@ -73,16 +73,19 @@ class UtilM {
   // ========= big ==========
   static Widget navBar() => NavBarCustom();
 
-  static AppBar appBar(
-          {showNotification = true,
-          notificationCount = 0,
-          String name = '',
-          VoidCallback? onBack}) =>
+  static AppBar appBar({
+    showNotification = true,
+    notificationCount = 0,
+    String name = '',
+    VoidCallback? onBack,
+    VoidCallback? onNotify,
+  }) =>
       AppBarCustom(
               showNotification: showNotification,
               notificationCount: notificationCount,
               name: name,
-              onBack: onBack)
+              onBack: onBack,
+              onNotify: onNotify)
           .appBar();
 
   static Widget fruitTypesLabels() => FruitListTypes();
@@ -95,6 +98,7 @@ class UtilM {
 
   static Widget fruitCardFav(FruitModel fruit) =>
       FruitCardFav(fruitModel: fruit);
+
   static Widget fruitCardCar(FruitModel fruit) =>
       FruitCardCar(fruitModel: fruit);
 

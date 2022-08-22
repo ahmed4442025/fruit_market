@@ -1,4 +1,5 @@
 import 'package:fruit_market/presentation/details_fruit/details_fruit_view.dart';
+import 'package:fruit_market/presentation/notify_view/notify_view.dart';
 import 'package:fruit_market/presentation/settings/Notification.dart';
 import 'package:fruit_market/presentation/settings/account_settings.dart';
 import 'package:fruit_market/presentation/settings/change_address.dart';
@@ -19,6 +20,7 @@ class Routes {
   static const String mainRout = "/main";
   static const String onBoardingRout = "/onBoarding";
   static const String detailsRout = "/details";
+  static const String notifyViewRout = "/notifyView";
 
   // settings
   static const String settingAcc = "/settingAcc";
@@ -54,6 +56,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => SettingNotificationView());
       case Routes.settingPublic:
         return MaterialPageRoute(builder: (_) => SettingPublicView());
+        case Routes.notifyViewRout:
+        return MaterialPageRoute(builder: (_) => NotifyView());
 
       // 404 not fount
       default:

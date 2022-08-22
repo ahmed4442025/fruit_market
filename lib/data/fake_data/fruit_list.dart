@@ -1,13 +1,14 @@
 import 'dart:math';
-
-import 'package:flutter/cupertino.dart';
+import 'package:fruit_market/data/models/notify_model.dart';
 import 'package:fruit_market/data/models/user_mode.dart';
 
 import '../models/fruit_model.dart';
 import '../models/fruit_type.dart';
 import '../models/group_model.dart';
+import '../models/notify_group.dart';
 
 class FruitData {
+  static List<NotifyGroup> notifyGroup = [];
   static List<GroupModel> groups = [];
   static List<FruitModel> allFruits = [];
   static final List<FruitType> fruitTypes = [
@@ -20,12 +21,13 @@ class FruitData {
   static final Random _rng = Random();
   static const String _imgFruitPath = "assets/images/fruit/";
   static const String _imgVegetablePath = "assets/images/vegetable/";
-  static UserModel userModel =
-      UserModel('manish marten', "manish2056@gmail.com", "assets/images/man.jpg");
+  static UserModel userModel = UserModel(
+      'manish marten', "manish2056@gmail.com", "assets/images/man.jpg");
 
   static void init() {
     _initAllFruits();
     _initGroups();
+    _initNofity();
   }
 
   static void _initGroups() {
@@ -179,4 +181,46 @@ class FruitData {
     'group 5',
     'group 6',
   ];
+
+  // ============= notify =============
+
+  static String _getRandImg() {
+    return allFruits[_rng.nextInt(allFruits.length)].img ?? '';
+  }
+
+  static void _initNofity() {
+    NotifyGroup g1 = NotifyGroup('Today', [
+      NotifyModel(
+          _getRandImg(),
+          'Buy 1kg Get 200gm Free',
+          'Buy 1 Get 1 Free for small sizes Until Feb 27,2021 .',
+          'Few minutes ago'),
+      NotifyModel(
+          _getRandImg(),
+          'Get 20 % Discount',
+          'Get 20% discount offer on buying Peaches today.',
+          '30 minutes ago'),
+      NotifyModel(
+          _getRandImg(),
+          'Get 20 % Extra',
+          'Get 20% discount offer on buying Broccoli today.',
+          '1 Hour ago'),
+    ]);
+
+    NotifyGroup g2 = NotifyGroup('Yesterday', [
+      NotifyModel(
+          _getRandImg(),
+          'Your Order booked',
+          'Rajesh will delivered your order. Thanks for your order and stay with us.',
+          '2 days ago'),
+      NotifyModel(
+          _getRandImg(),
+          'Get 20 % Discount',
+          'Get 20% discount offer on buying Watermelon today.',
+          '2 days ago'),
+    ]);
+
+    notifyGroup.add(g1);
+    notifyGroup.add(g2);
+  }
 }
