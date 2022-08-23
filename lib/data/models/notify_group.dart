@@ -5,4 +5,5 @@ class NotifyGroup{
   List<NotifyModel>? notifyList;
 
   NotifyGroup(this.name, this.notifyList);
+
 }

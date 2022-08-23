@@ -222,5 +222,6 @@ class FruitData {
 
     notifyGroup.add(g1);
     notifyGroup.add(g2);
+    notifyGroup.add(g1);
   }
 }

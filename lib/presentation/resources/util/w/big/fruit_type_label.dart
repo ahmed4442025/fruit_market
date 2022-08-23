@@ -19,7 +19,7 @@ class FruitListTypes extends StatelessWidget {
       builder: (BuildContext context, state) {
         _cubit = AppCubit.get(context);
         return SizedBox(
-          height: AppSize.s50,
+          height: AppSize.s55,
           child: ListView.builder(
             shrinkWrap: true,
             scrollDirection: Axis.horizontal,

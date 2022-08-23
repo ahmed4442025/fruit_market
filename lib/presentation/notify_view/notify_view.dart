@@ -30,44 +30,44 @@ class NotifyView extends StatelessWidget {
   Scaffold myScaffold() => Scaffold(
         appBar: UtilM.appBar(showNotification: false, name: 'Notification'),
         body: Padding(
-          padding: const EdgeInsets.all(AppPadding.p5),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              NotifyGroupCard(
-                notifyGroup: _cubit.notify[0],
+            padding: const EdgeInsets.all(AppPadding.p5),
+            child: ListView.builder(
+              itemCount: _cubit.notify.length,
+              itemBuilder: (c, i) => NotifyGroupCard(
+                notifyGroup: _cubit.notify[i],
               ),
-              const Divider(),
-              NotifyCard(
-                notifyModel: _cubit.notify[0].notifyList![0],
-              ),
-            ],
-          ),
-        ),
+            )),
       );
 }
 
 class NotifyGroupCard extends StatelessWidget {
   final NotifyGroup notifyGroup;
 
-  const NotifyGroupCard({Key? key, required this.notifyGroup})
-      : super(key: key);
+  const NotifyGroupCard({Key? key, required this.notifyGroup}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        // data ( today, yesterday ...)
         Container(
           width: double.infinity,
           height: 35,
-          color: ColorManager.lightLightGrey.withOpacity(.1),
+          color: ColorManager.lightLightGreen,
           child: Center(
             child: Text(notifyGroup.name ?? '',
                 style: AllStyles.text(context).bodyLarge),
           ),
         ),
-        ...?notifyGroup.notifyList?.map((e) => [Text('data')]),
+        UtilM.box10(),
+        // cards of notify + divider
+        for (int i = 0; i < notifyGroup.notifyList!.length; i++) ...[
+          NotifyCard(notifyModel: notifyGroup.notifyList![i]),
+          i != notifyGroup.notifyList!.length - 1
+              ? const Divider()
+              : UtilM.box15()
+        ]
       ],
     );
   }
@@ -97,21 +97,21 @@ class NotifyCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(AppPadding.p12),
         child: Image.asset(
           notifyModel.img ?? '',
-          height: AppSize.s120,
+          height: AppSize.s100,
           width: AppSize.s100,
           fit: BoxFit.cover,
         ),
       );
 
   Widget info() => SizedBox(
-        height: AppSize.s120,
+        height: AppSize.s100,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Text(
-              notifyModel.title ?? '',
-              style: AllStyles.text(_context).bodyLarge,
+              (notifyModel.title ?? ''),
+              style: AllStyles.text(_context).titleSmall,
             ),
             Text(notifyModel.subTitle ?? '',
                 style: AllStyles.text(_context).labelSmall),
@@ -122,5 +122,5 @@ class NotifyCard extends StatelessWidget {
       );
 
   Widget showMore() =>
-      SizedBox(width: 50, child: const Icon(Icons.more_vert_rounded));
+      const SizedBox(width: 30, child: Icon(Icons.more_vert_rounded));
 }

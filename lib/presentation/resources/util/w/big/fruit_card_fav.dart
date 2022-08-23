@@ -14,14 +14,14 @@ class FruitCardFav extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 100,
+      height: AppSize.fruitCHeightFav,
       child: Row(
         children: [
           // image
           image(),
           UtilM.box10(),
           info(context),
-          Spacer(),
+          const Spacer(),
           addToCard()
         ],
       ),
@@ -32,7 +32,7 @@ class FruitCardFav extends StatelessWidget {
         borderRadius: BorderRadius.circular(AppPadding.p5),
         child: Image.asset(
           fruitModel.img ?? '',
-          height: AppSize.s100,
+          height: AppSize.fruitCHeightFav,
           width: AppSize.s100,
           fit: BoxFit.cover,
         ),

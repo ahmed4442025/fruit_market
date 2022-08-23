@@ -146,6 +146,15 @@ class AppCubit extends Cubit<AppStates> {
 
 // ======= Notify scr ===========
   late List<NotifyGroup> notify;
+
+  int getNotifyCount(){
+    int total = 0;
+    notify.forEach((element) {
+      if (element.notifyList != null)
+        total += element.notifyList!.length;
+    });
+    return total;
+  }
 }
 
 class _NavItem {

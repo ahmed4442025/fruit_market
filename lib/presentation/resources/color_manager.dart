@@ -8,6 +8,7 @@ class ColorManager {
   static const orange = Color(0xffcc7d00);
   static const lightOrange = Color(0xffffb238);
   static const lightGreen = Colors.lightGreen;
+  static const Color lightLightGreen = Color(0x2269a030);
   static const error = Color(0xfff03a16);
   static const lightGrey = Color(0xffa6a1a0);
   static const lightBlue = Color(0xff7a91f1);
