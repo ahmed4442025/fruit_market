@@ -4,13 +4,18 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import '../../../color_manager.dart';
 
 class RateFruit extends StatelessWidget {
-  final double rate ;
-  const RateFruit({Key? key, required this.rate}) : super(key: key);
+  final double rate;
+
+  final bool active;
+
+  const RateFruit({Key? key, required this.rate, required this.active})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
+        // main rate
         RatingBar.builder(
           initialRating: rate,
           minRating: 1,
@@ -26,12 +31,14 @@ class RateFruit extends StatelessWidget {
           },
           itemSize: 15,
         ),
-        InkWell(
-          onTap: null,
-          child: Container(
-            height: 15,
-          ),
-        )
+        // disable
+        if (!active)
+          InkWell(
+            onTap: null,
+            child: Container(
+              height: 15,
+            ),
+          )
       ],
     );
   }

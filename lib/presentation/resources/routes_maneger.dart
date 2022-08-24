@@ -1,4 +1,5 @@
 import 'package:fruit_market/presentation/details_fruit/details_fruit_view.dart';
+import 'package:fruit_market/presentation/my_orders_view/my_orders_view.dart';
 import 'package:fruit_market/presentation/notify_view/notify_view.dart';
 import 'package:fruit_market/presentation/settings/Notification.dart';
 import 'package:fruit_market/presentation/settings/account_settings.dart';
@@ -21,6 +22,7 @@ class Routes {
   static const String onBoardingRout = "/onBoarding";
   static const String detailsRout = "/details";
   static const String notifyViewRout = "/notifyView";
+  static const String myOrder = "/myOrder";
 
   // settings
   static const String settingAcc = "/settingAcc";
@@ -45,6 +47,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const OnBoardingView());
       case Routes.detailsRout:
         return MaterialPageRoute(builder: (_) => DetailsFruitView());
+      case Routes.myOrder:
+        return MaterialPageRoute(builder: (_) => MyOrdersView());
       // settings
       case Routes.settingAcc:
         return MaterialPageRoute(builder: (_) => SettingsAccView());
@@ -56,7 +60,7 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => SettingNotificationView());
       case Routes.settingPublic:
         return MaterialPageRoute(builder: (_) => SettingPublicView());
-        case Routes.notifyViewRout:
+      case Routes.notifyViewRout:
         return MaterialPageRoute(builder: (_) => NotifyView());
 
       // 404 not fount

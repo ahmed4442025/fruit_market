@@ -94,7 +94,10 @@ class UtilM {
 
   static Widget fruitGroup(GroupModel group) => FruitGroup(oneGroup: group);
 
-  static Widget rateFruit({double rate = 5}) => RateFruit(rate: rate);
+  static Widget rateFruit({double rate = 5, active = false}) => RateFruit(
+        rate: rate,
+        active: active,
+      );
 
   static Widget fruitCardFav(FruitModel fruit) =>
       FruitCardFav(fruitModel: fruit);

@@ -31,8 +31,10 @@ class MyAccountView extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               profile(),
-              ...sett(Icons.shopping_bag, 'My Orders'),
-              ...sett(Icons.favorite, 'Favourites'),
+              ...sett(Icons.shopping_bag, 'My Orders',
+                  onTap: () => ViewsManager.openWBMyOrdersView(_context)),
+              ...sett(Icons.favorite, 'Favourites',
+                  onTap: () => _cubit.openFav()),
               ...sett(Icons.settings, 'Settings',
                   onTap: () => ViewsManager.openWBSettPub(_context)),
               ...sett(Icons.shopping_cart, 'My Cart'),

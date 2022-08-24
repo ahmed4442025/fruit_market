@@ -68,6 +68,10 @@ class AppCubit extends Cubit<AppStates> {
     emit(AppChangeNavState());
   }
 
+  openFav() {
+    changeNavIndex(2);
+  }
+
   // ======= home scr ===========
 
   late List<FruitType> fruitTypes;
@@ -147,11 +151,10 @@ class AppCubit extends Cubit<AppStates> {
 // ======= Notify scr ===========
   late List<NotifyGroup> notify;
 
-  int getNotifyCount(){
+  int getNotifyCount() {
     int total = 0;
     notify.forEach((element) {
-      if (element.notifyList != null)
-        total += element.notifyList!.length;
+      if (element.notifyList != null) total += element.notifyList!.length;
     });
     return total;
   }
