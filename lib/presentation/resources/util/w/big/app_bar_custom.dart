@@ -38,8 +38,6 @@ class AppBarCustom {
                 ),
               )
             : null,
-        // leadingWidth: 40,
-        titleSpacing: 0,
       );
 }
 

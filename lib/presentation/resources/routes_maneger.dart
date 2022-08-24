@@ -1,4 +1,5 @@
 import 'package:fruit_market/presentation/details_fruit/details_fruit_view.dart';
+import 'package:fruit_market/presentation/main/my_account/help.dart';
 import 'package:fruit_market/presentation/my_orders_view/my_orders_view.dart';
 import 'package:fruit_market/presentation/notify_view/notify_view.dart';
 import 'package:fruit_market/presentation/settings/Notification.dart';
@@ -23,6 +24,7 @@ class Routes {
   static const String detailsRout = "/details";
   static const String notifyViewRout = "/notifyView";
   static const String myOrder = "/myOrder";
+  static const String helpView = "/helpView";
 
   // settings
   static const String settingAcc = "/settingAcc";
@@ -49,6 +51,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => DetailsFruitView());
       case Routes.myOrder:
         return MaterialPageRoute(builder: (_) => MyOrdersView());
+      case Routes.helpView:
+        return MaterialPageRoute(builder: (_) => const HelpView());
       // settings
       case Routes.settingAcc:
         return MaterialPageRoute(builder: (_) => SettingsAccView());

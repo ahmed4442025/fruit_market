@@ -71,6 +71,10 @@ class ViewsManager {
     _openViewWithBack(context, Routes.myOrder);
   }
 
+  static void openWBMyHelpView(context) {
+    _openViewWithBack(context, Routes.helpView);
+  }
+
   // ==========
   static void _openViewNoBack(context, nextPage) {
     Navigator.pushReplacementNamed(context, nextPage);
