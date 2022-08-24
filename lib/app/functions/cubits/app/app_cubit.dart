@@ -51,12 +51,10 @@ class AppCubit extends Cubit<AppStates> {
   late final List<BottomNavigationBarItem> navWidgets;
 
   List<BottomNavigationBarItem> getNavItems() {
-    print('create List<BottomNavigationBarItem>');
-    List<BottomNavigationBarItem> l = [];
-    for (var item in _navItems) {
-      l.add(BottomNavigationBarItem(icon: Icon(item.icon), label: item.label));
-    }
-    return l;
+    return _navItems
+        .map((item) =>
+            BottomNavigationBarItem(icon: Icon(item.icon), label: item.label))
+        .toList();
   }
 
   int navIndex = 0;
@@ -70,6 +68,10 @@ class AppCubit extends Cubit<AppStates> {
 
   openFav() {
     changeNavIndex(2);
+  }
+
+  openCard() {
+    changeNavIndex(1);
   }
 
   // ======= home scr ===========

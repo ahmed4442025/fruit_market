@@ -11,17 +11,11 @@ class ViewsManager {
   }
 
   static void tempHome(context) {
-    openHomeView(context);
+    bool isLogin = false;
+    isLogin ? openHomeView(context) : openLoginMain(context);
   }
 
   // const
-  static void openLoginView(context) {
-    _openViewNoBack(context, Routes.loginRout);
-  }
-
-  static void openRegisterView(context) {
-    _openViewNoBack(context, Routes.registerRout);
-  }
 
   static void openHomeView(context) {
     _openViewNoBack(context, Routes.mainRout);
@@ -42,7 +36,30 @@ class ViewsManager {
     }
   }
 
-  // settings
+  // ============ login ============
+  // with no back
+  static void openLoginMain(context) {
+    _openViewNoBack(context, Routes.loginRout);
+  }
+
+  static void openLoginInit(context) {
+    _openViewNoBack(context, Routes.initAcc);
+  }
+
+  // with back
+  static void openWBLoginConfirmPhone(context) {
+    _openViewWithBack(context, Routes.confirmMobil);
+  }
+
+  static void openWBLoginConfirmCode(context) {
+    _openViewWithBack(context, Routes.confirmCode);
+  }
+
+  static void openWBLoginLoading(context) {
+    _openViewWithBack(context, Routes.loginCLoading);
+  }
+
+  // ============ settings ============
   static void openWBSettAcc(context) {
     _openViewWithBack(context, Routes.settingAcc);
   }
@@ -63,6 +80,7 @@ class ViewsManager {
     _openViewWithBack(context, Routes.settingNotify);
   }
 
+  // ============ other ============
   static void openWBNotifyView(context) {
     _openViewWithBack(context, Routes.notifyViewRout);
   }

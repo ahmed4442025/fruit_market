@@ -7,7 +7,6 @@ import '../../../color_manager.dart';
 
 class NavBarCustom extends StatelessWidget {
   NavBarCustom({Key? key}) : super(key: key);
-  late BuildContext _context;
   late AppCubit _cubit;
 
 
@@ -17,7 +16,6 @@ class NavBarCustom extends StatelessWidget {
     return BlocConsumer<AppCubit, AppStates>(
       listener: (BuildContext context, state) {},
       builder: (BuildContext context, state) {
-        _context = context;
         _cubit = AppCubit.get(context);
         return Container(
           decoration: const BoxDecoration(
@@ -41,12 +39,4 @@ class NavBarCustom extends StatelessWidget {
       },
     );
   }
-}
-
-class _NavItem {
-  final IconData icon;
-  final Text label;
-  final Widget screen;
-
-  _NavItem({required this.icon, required this.label, required this.screen});
 }

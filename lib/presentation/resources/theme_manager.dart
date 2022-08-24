@@ -43,7 +43,7 @@ class ThemeManager {
             style: ElevatedButton.styleFrom(
                 textStyle: StylesManager.getRegularStyle(
                     color: ColorManager.white, fontSize: FontSizeManager.s17),
-                primary: ColorManager.primary,
+                backgroundColor: ColorManager.primary,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(AppSize.s12)))),
 
@@ -110,7 +110,7 @@ class ThemeManager {
             selectedItemColor: ColorManager.primary,
             unselectedItemColor: ColorManager.lightGrey,
             selectedLabelStyle: StylesManager.getMediumStyle(
-                color: ColorManager.primary, fontSize: FontSizeManager.s14),
+                color: ColorManager.primary, fontSize: FontSizeManager.s12),
             unselectedLabelStyle: StylesManager.getMediumStyle(
                 color: ColorManager.lightGrey, fontSize: FontSizeManager.s14),
             selectedIconTheme: const IconThemeData(size: AppSize.s30),
