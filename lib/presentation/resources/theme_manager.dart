@@ -56,8 +56,13 @@ class ThemeManager {
           displayLarge: StylesManager.getSemiBoldStyle(
               color: ColorManager.lightBlack, fontSize: FontSizeManager.s28),
 
-          titleMedium: StylesManager.getMediumStyle(
+          // text field
+          titleMedium: StylesManager.getRegularStyle(
+              color: ColorManager.black, fontSize: FontSizeManager.s16),
+
+          labelMedium: StylesManager.getMediumStyle(
               color: ColorManager.lightGrey, fontSize: FontSizeManager.s16),
+
           headlineMedium: StylesManager.getMediumStyle(
               color: ColorManager.lightLightBlack, fontSize: FontSizeManager.s16),
           // body
@@ -104,6 +109,7 @@ class ThemeManager {
                 borderSide: BorderSide(
                     color: ColorManager.primary, width: AppSize.s1_5),
                 borderRadius: BorderRadius.all(Radius.circular(AppSize.s8)))),
+
 
         // ------------ bottomNavigationBarTheme ------------
         bottomNavigationBarTheme: BottomNavigationBarThemeData(

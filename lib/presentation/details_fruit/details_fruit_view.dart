@@ -81,7 +81,7 @@ class DetailsFruitView extends StatelessWidget {
         padding: const EdgeInsets.only(left: AppPadding.p16),
         child: Text(
           myFruit.details ?? '',
-          style: AllStyles.text(_context).titleMedium,
+          style: AllStyles.text(_context).labelMedium,
         ),
       );
 
@@ -106,7 +106,7 @@ class DetailsFruitView extends StatelessWidget {
             UtilM.box10(),
             Text(
               name,
-              style: AllStyles.text(_context).titleMedium!.copyWith(
+              style: AllStyles.text(_context).labelMedium!.copyWith(
                   color: ColorManager.lightBlack,
                   fontSize: FontSizeManager.s14),
             ),

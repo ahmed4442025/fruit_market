@@ -36,7 +36,7 @@ class SettingsLangView extends StatelessWidget {
             children: [
               Text(
                 'Language',
-                style: AllStyles.text(_context).titleMedium,
+                style: AllStyles.text(_context).labelMedium,
               ),
               UtilM.box10(),
               Row(

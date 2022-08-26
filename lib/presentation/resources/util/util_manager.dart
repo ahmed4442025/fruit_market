@@ -11,6 +11,7 @@ import 'package:fruit_market/presentation/resources/util/w/big/rateFruit.dart';
 import 'package:fruit_market/presentation/resources/util/w/small/search_textField.dart';
 import '../all_styles.dart';
 import 'w/big/app_bar_custom.dart';
+import 'w/big/keaboard_num.dart';
 import 'w/big/nav_bar_custom.dart';
 import 'w/small/elevatedCustomBt.dart';
 import 'package:fruit_market/presentation/resources/values_manager.dart';
@@ -107,5 +108,15 @@ class UtilM {
 
   static Widget counter({void Function(int)? onChange}) => AddOne(
         onChange: onChange ?? (i) {},
+      );
+
+  static Widget keyboardNum(
+          {void Function(String)? onChange,
+          VoidCallback? onSubmit,
+          int? max}) =>
+      KeyboardNum(
+        onChange: onChange ?? (v) {},
+        onSubmit: onSubmit ?? () {},
+        max: max,
       );
 }

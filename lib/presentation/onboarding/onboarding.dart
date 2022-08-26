@@ -49,7 +49,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                   onTap: onSkip,
                   child: Text(
                     StringsManager.skip,
-                    style: AllStyles.text(context).titleMedium,
+                    style: AllStyles.text(context).labelMedium,
                   ),
                 ),
                 UtilM.box20()
@@ -146,7 +146,7 @@ class _onBoardingBody extends StatelessWidget {
           Text(
             slider.subTitle,
             maxLines: 2,
-            style: AllStyles.text(context).titleMedium,
+            style: AllStyles.text(context).labelMedium,
           ),
         ],
       ),

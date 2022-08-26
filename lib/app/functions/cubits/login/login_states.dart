@@ -14,3 +14,6 @@ class LoginConfirmingCodeState extends LoginStates {}
 class LoginConfirmOkCodeState extends LoginStates {}
 class LoginConfirmErrorCodeState extends LoginStates {}
 
+// -------- other --------
+class LoginChangePhoneState extends LoginStates {}
+

@@ -37,6 +37,7 @@ dependencies:
   flutter_bloc: ^8.0.0            # block
   shared_preferences: ^2.0.11     # shared preferences
   flutter_rating_bar: ^4.0.1      # rating bar
+  country_picker: ^2.0.16         # country code
 
 
   # The following adds the Cupertino Icons font to your application.

@@ -62,9 +62,9 @@ class _FruitTypeLabel extends StatelessWidget {
                 fruitType.name,
                 style: fruitType.isSelected
                     ? AllStyles.text(context)
-                        .titleMedium!
+                        .labelMedium!
                         .copyWith(color: ColorManager.white)
-                    : AllStyles.text(context).titleMedium,
+                    : AllStyles.text(context).labelMedium,
               ),
             ),
           ),
