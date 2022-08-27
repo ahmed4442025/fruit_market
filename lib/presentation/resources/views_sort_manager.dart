@@ -46,18 +46,19 @@ class ViewsManager {
     _openViewNoBack(context, Routes.initAcc);
   }
 
+  static void openLoginConfirmCode(context) {
+    _openViewNoBack(context, Routes.confirmCode);
+  }
+
   // with back
   static void openWBLoginConfirmPhone(context) {
     _openViewWithBack(context, Routes.confirmMobil);
   }
 
-  static void openWBLoginConfirmCode(context) {
-    _openViewWithBack(context, Routes.confirmCode);
-  }
-
   static void openWBLoginLoading(context) {
     _openViewWithBack(context, Routes.loginCLoading);
   }
+  // ============ End login ============
 
   // ============ settings ============
   static void openWBSettAcc(context) {

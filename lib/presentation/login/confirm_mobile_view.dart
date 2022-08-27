@@ -4,6 +4,7 @@ import 'package:fruit_market/app/functions/cubits/login/login_cubit.dart';
 import 'package:fruit_market/app/functions/cubits/login/login_states.dart';
 import 'package:fruit_market/presentation/resources/util/util_manager.dart';
 import 'package:country_picker/country_picker.dart';
+import 'package:fruit_market/presentation/resources/views_sort_manager.dart';
 
 import '../resources/values_manager.dart';
 
@@ -86,7 +87,12 @@ class ConfirmMobileView extends StatelessWidget {
     );
   }
 
-  void onVerify() {}
+  void onVerify() {
+    // send code and open code confirm view if => (success)
+    _cubit.sendCode(() => ViewsManager.openLoginConfirmCode(_context));
+    // open loading view any way
+    ViewsManager.openWBLoginLoading(_context);
+  }
 
   String toPhoneNum(String text) {
     return text.replaceAllMapped(RegExp(r'(\d{3})(\d{3})(\d+)'),

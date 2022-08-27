@@ -32,7 +32,7 @@ class LoginView extends StatelessWidget {
                     onTap: () => ViewsManager.openWBLoginLoading(_context),
                     child: const Text('openWBLoginLoading')),
                 InkWell(
-                    onTap: () => ViewsManager.openWBLoginConfirmCode(_context),
+                    onTap: () => ViewsManager.openLoginConfirmCode(_context),
                     child: const Text('openWBLoginConfirmCode')),
                 InkWell(
                     onTap: () => ViewsManager.openWBLoginConfirmPhone(_context),

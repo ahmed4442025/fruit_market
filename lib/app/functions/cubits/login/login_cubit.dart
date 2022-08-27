@@ -26,9 +26,22 @@ class LoginCubit extends Cubit<LoginStates> {
     phone = newPhone;
     emit(LoginChangePhoneState());
   }
+
   changeCountryCode(String newCountryCode) {
     countryCode = newCountryCode;
     // print('cubit : countryCode change to $countryCode');
     emit(LoginChangePhoneState());
+  }
+
+  // phone auth
+  void sendCode(VoidCallback onSuccess) async {
+    const int sec = 3;
+    print('sending Code');
+    emit(LoginSendingCodeState());
+    await Future.delayed(const Duration(seconds: sec));
+    print('success send code to u phone');
+    emit(LoginSendOkCodeState());
+    await Future.delayed(const Duration(seconds: sec));
+    onSuccess();
   }
 }

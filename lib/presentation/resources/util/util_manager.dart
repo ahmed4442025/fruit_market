@@ -7,6 +7,7 @@ import 'package:fruit_market/presentation/resources/util/w/big/fruit_card_car.da
 import 'package:fruit_market/presentation/resources/util/w/big/fruit_card_fav.dart';
 import 'package:fruit_market/presentation/resources/util/w/big/fruit_group.dart';
 import 'package:fruit_market/presentation/resources/util/w/big/fruit_type_label.dart';
+import 'package:fruit_market/presentation/resources/util/w/big/loading_animation_list.dart';
 import 'package:fruit_market/presentation/resources/util/w/big/rateFruit.dart';
 import 'package:fruit_market/presentation/resources/util/w/small/search_textField.dart';
 import '../all_styles.dart';
@@ -119,4 +120,7 @@ class UtilM {
         onSubmit: onSubmit ?? () {},
         max: max,
       );
+
+  static Widget randomLoading({int? index, double? size, Color? clr}) =>
+      LoadingAnimationList.randomLoading(index: index, clr: clr, size: size);
 }
