@@ -22,7 +22,7 @@ class FavouriteView extends StatelessWidget {
   }
 
   Scaffold myScaffold() => Scaffold(
-        appBar: UtilM.appBar(showNotification: false, name: 'Favourite'),
+        appBar: UtilM.appBar( name: 'Favourite'),
         body: Padding(
           padding: const EdgeInsets.all(14.0),
           child: ListView.separated(

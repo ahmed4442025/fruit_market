@@ -27,7 +27,6 @@ class SettingsLangView extends StatelessWidget {
   Scaffold myScaffold() => Scaffold(
         appBar: UtilM.appBar(
             name: 'Language Setting',
-            showNotification: false,
             onBack: () => ViewsManager.backIfUCan(_context)),
         body: Padding(
           padding: const EdgeInsets.all(AppPadding.p20),

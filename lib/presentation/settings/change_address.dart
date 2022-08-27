@@ -29,7 +29,6 @@ class SettingsAddressView extends StatelessWidget {
   Scaffold myScaffold() => Scaffold(
         appBar: UtilM.appBar(
             name: 'Change Address',
-            showNotification: false,
             onBack: () => ViewsManager.backIfUCan(_context)),
         body: Padding(
           padding: const EdgeInsets.all(AppSize.s14),

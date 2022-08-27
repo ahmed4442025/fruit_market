@@ -76,7 +76,7 @@ class UtilM {
   static Widget navBar() => NavBarCustom();
 
   static AppBar appBar({
-    showNotification = true,
+    showNotification = false,
     notificationCount = 0,
     String name = '',
     VoidCallback? onBack,

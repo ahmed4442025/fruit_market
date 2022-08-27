@@ -37,6 +37,7 @@ class HomeNavView extends StatelessWidget {
       appBar: PreferredSize(
           preferredSize: const Size.fromHeight(AppSize.s90),
           child: UtilM.appBar(
+            showNotification: true,
               name: 'home',
               notificationCount: _cubit.getNotifyCount(),
               onNotify: () => ViewsManager.openWBNotifyView(_context))),

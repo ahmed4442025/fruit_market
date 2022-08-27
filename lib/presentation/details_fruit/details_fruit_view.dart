@@ -34,7 +34,6 @@ class DetailsFruitView extends StatelessWidget {
   Scaffold myScaffold() => Scaffold(
         appBar: UtilM.appBar(
             onBack: () => ViewsManager.backIfUCan(_context),
-            showNotification: false,
             name: "DETAILS"),
         body: _cubit.currentFruitCard != null
             ? Padding(

@@ -31,7 +31,6 @@ class SettingNotificationView extends StatelessWidget {
   Scaffold myScaffold() => Scaffold(
         appBar: UtilM.appBar(
             name: 'Notification Settings',
-            showNotification: false,
             onBack: () => ViewsManager.backIfUCan(_context)),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

@@ -27,7 +27,6 @@ class MyOrdersView extends StatelessWidget {
 
   Scaffold myScaffold() => Scaffold(
         appBar: UtilM.appBar(
-            showNotification: false,
             name: 'My Orders',
             onBack: () => ViewsManager.backIfUCan(_context)),
         body: ListView.separated(

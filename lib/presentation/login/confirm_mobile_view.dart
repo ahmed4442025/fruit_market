@@ -31,6 +31,8 @@ class ConfirmMobileView extends StatelessWidget {
   }
 
   Scaffold myScaffold() => Scaffold(
+        appBar: UtilM.appBar(
+            onBack: () => ViewsManager.backIfUCan(_context)),
         body: Center(
           child: Padding(
             padding: const EdgeInsets.all(AppPadding.p16),

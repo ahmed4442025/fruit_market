@@ -17,7 +17,6 @@ class HelpView extends StatelessWidget {
     return Scaffold(
       appBar: UtilM.appBar(
         name: 'Help',
-          showNotification: false,
           onBack: () => ViewsManager.backIfUCan(context)),
       body: SingleChildScrollView(
         child: Padding(

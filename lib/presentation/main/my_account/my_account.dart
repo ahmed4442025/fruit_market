@@ -25,7 +25,7 @@ class MyAccountView extends StatelessWidget {
   }
 
   Scaffold myScaffold() => Scaffold(
-        appBar: UtilM.appBar(showNotification: false),
+        appBar: UtilM.appBar(),
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

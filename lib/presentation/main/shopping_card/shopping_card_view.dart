@@ -26,7 +26,7 @@ class ShoppingCardView extends StatelessWidget {
   }
 
   Scaffold myScaffold() => Scaffold(
-        appBar: UtilM.appBar(showNotification: false, name: 'ShoppingCard'),
+        appBar: UtilM.appBar( name: 'ShoppingCard'),
         body: Padding(
           padding: const EdgeInsets.all(AppPadding.p14),
           child: Column(

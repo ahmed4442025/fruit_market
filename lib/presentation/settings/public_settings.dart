@@ -26,7 +26,6 @@ class SettingPublicView extends StatelessWidget {
   Scaffold myScaffold() => Scaffold(
         appBar: UtilM.appBar(
             name: 'Settings',
-            showNotification: false,
             onBack: () => ViewsManager.backIfUCan(_context)),
         body: Padding(
           padding: const EdgeInsets.all(AppPadding.p8),
