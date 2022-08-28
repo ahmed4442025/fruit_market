@@ -11,7 +11,7 @@ class ViewsManager {
   }
 
   static void tempHome(context) {
-    bool isLogin = false;
+    bool isLogin = CacheGet.isLogin;
     isLogin ? openHomeView(context) : openLoginMain(context);
   }
 

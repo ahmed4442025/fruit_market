@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_market/app/functions/cubits/app/app_cubit.dart';
 import 'package:fruit_market/app/functions/cubits/app/app_states.dart';
+import 'package:fruit_market/presentation/resources/views_sort_manager.dart';
 
 import '../resources/all_styles.dart';
 import '../resources/util/util_manager.dart';
@@ -65,7 +66,7 @@ class InitAccView extends StatelessWidget {
                 UtilM.box60(),
                 UtilM.buttonText(
                     text: "VERIFY",
-                    onTap: () => _cubit.changeAdr(ctrAdr.text),
+                    onTap: onVerify,
                     width: double.infinity),
                 UtilM.box100(),
               ],
@@ -73,4 +74,9 @@ class InitAccView extends StatelessWidget {
           ),
         )),
       );
+
+  void onVerify(){
+    _cubit.changeAdr(ctrAdr.text);
+    ViewsManager.tempHome(_context);
+  }
 }

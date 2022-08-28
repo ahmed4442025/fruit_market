@@ -26,7 +26,7 @@ class ShoppingCardView extends StatelessWidget {
   }
 
   Scaffold myScaffold() => Scaffold(
-        appBar: UtilM.appBar( name: 'ShoppingCard'),
+        appBar: UtilM.appBar(name: 'ShoppingCard'),
         body: Padding(
           padding: const EdgeInsets.all(AppPadding.p14),
           child: Column(
@@ -54,7 +54,7 @@ class ShoppingCardView extends StatelessWidget {
             Icons.location_on_outlined,
           ),
           Text(
-            '${_cubit.setAddress.substring(0, 25)} ...',
+            '${_cubit.setAddress.length > 25 ? _cubit.setAddress.substring(0, 25) : _cubit.setAddress} ...',
             style: AllStyles.text(_context)
                 .bodySmall!
                 .copyWith(fontSize: FontSizeManager.s16),

@@ -8,10 +8,11 @@ class CacheGet {
     _getSetNotifyProm();
     _getSetLang();
     _getSetAdr();
+    _getIsLogin();
   }
 
   // ---------- on boarding view (skip) ----------
-  static late final bool skipIntro;
+  static late bool skipIntro;
 
   // get
   static void _getSkipIntro() {
@@ -24,7 +25,7 @@ class CacheGet {
   }
 
   // ---------- settings notify ----------
-  static late final bool setNotifyAcc;
+  static late bool setNotifyAcc;
 
   // get
   static void _getSetNotifyAcc() {
@@ -37,11 +38,12 @@ class CacheGet {
   }
 
   // --------
-  static late final bool setNotifyProm;
+  static late bool setNotifyProm;
 
   // get
   static void _getSetNotifyProm() {
-    setNotifyProm = CacheHelper.getBool(key: CacheStrings.setNotifyProm) ?? false;
+    setNotifyProm =
+        CacheHelper.getBool(key: CacheStrings.setNotifyProm) ?? false;
   }
 
   // set
@@ -50,7 +52,7 @@ class CacheGet {
   }
 
   // -------- setting lang
-  static late final String setLang;
+  static late String setLang;
 
   // get
   static void _getSetLang() {
@@ -63,7 +65,7 @@ class CacheGet {
   }
 
   // -------- setting Address
-  static late final String setAdr;
+  static late String setAdr;
 
   // get
   static void _getSetAdr() {
@@ -75,4 +77,17 @@ class CacheGet {
     CacheHelper.setString(key: CacheStrings.setAdr, value: setAdr);
   }
 
+  // -------- Login
+  static late bool isLogin;
+
+  // get
+  static void _getIsLogin() {
+    isLogin = CacheHelper.getBool(key: CacheStrings.isLogin) ?? false;
+  }
+
+  // set
+  static void setIsLogin(bool islogin) {
+    isLogin = islogin;
+    CacheHelper.setBool(key: CacheStrings.isLogin, value: islogin);
+  }
 }

@@ -28,7 +28,8 @@ class NotifyView extends StatelessWidget {
   }
 
   Scaffold myScaffold() => Scaffold(
-        appBar: UtilM.appBar( name: 'Notification'),
+        appBar: UtilM.appBar( name: 'Notification',
+            onBack: () => ViewsManager.backIfUCan(_context)),
         body: Padding(
             padding: const EdgeInsets.all(AppPadding.p5),
             child: ListView.builder(

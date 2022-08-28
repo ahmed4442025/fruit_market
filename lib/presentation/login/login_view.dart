@@ -35,7 +35,7 @@ class LoginView extends StatelessWidget {
               img(),
               title(),
               UtilM.box20(),
-              textfield(),
+              textFieldPhone(),
               or(),
               googleOrFB()
             ],
@@ -53,7 +53,7 @@ class LoginView extends StatelessWidget {
             .copyWith(color: ColorManager.primary),
       );
 
-  Widget textfield() => TextField(
+  Widget textFieldPhone() => TextField(
         decoration: const InputDecoration(hintText: 'Enter Your Mobile Number'),
         readOnly: true,
         onTap: () => ViewsManager.openWBLoginConfirmPhone(_context),

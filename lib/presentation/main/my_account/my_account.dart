@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruit_market/app/functions/cubits/login/login_cubit.dart';
 import 'package:fruit_market/presentation/resources/all_styles.dart';
 import 'package:fruit_market/presentation/resources/color_manager.dart';
 import 'package:fruit_market/presentation/resources/util/util_manager.dart';
@@ -11,6 +12,7 @@ class MyAccountView extends StatelessWidget {
   MyAccountView({Key? key}) : super(key: key);
   late BuildContext _context;
   late AppCubit _cubit;
+  late LoginCubit _cubit2;
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +21,7 @@ class MyAccountView extends StatelessWidget {
       builder: (BuildContext context, state) {
         _context = context;
         _cubit = AppCubit.get(context);
+        _cubit2 = LoginCubit.get(context);
         return myScaffold();
       },
     );
@@ -43,7 +46,8 @@ class MyAccountView extends StatelessWidget {
               ...sett(Icons.share, 'Refer a Friend'),
               ...sett(Icons.question_mark_outlined, 'Help',
                   onTap: () => ViewsManager.openWBMyHelpView(_context)),
-              ...sett(Icons.logout, 'Log Out'),
+              ...sett(Icons.logout, 'Log Out',
+                  onTap: () => _cubit2.logOut(_context)),
             ],
           ),
         ),

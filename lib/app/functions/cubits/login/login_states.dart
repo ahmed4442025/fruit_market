@@ -9,11 +9,12 @@ class LoginSendingCodeState extends LoginStates {}
 class LoginSendOkCodeState extends LoginStates {}
 class LoginSendErrorCodeState extends LoginStates {}
 
-// -------- confirm code --------
-class LoginConfirmingCodeState extends LoginStates {}
-class LoginConfirmOkCodeState extends LoginStates {}
-class LoginConfirmErrorCodeState extends LoginStates {}
+// // -------- confirm code --------
+// class LoginConfirmingCodeState extends LoginStates {}
+// class LoginConfirmOkCodeState extends LoginStates {}
+// class LoginConfirmErrorCodeState extends LoginStates {}
 
 // -------- other --------
 class LoginChangePhoneState extends LoginStates {}
+class LoginChangeCodeState extends LoginStates {}
 

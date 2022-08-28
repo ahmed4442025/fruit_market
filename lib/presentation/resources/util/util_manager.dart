@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fruit_market/data/models/fruit_model.dart';
 import 'package:fruit_market/data/models/group_model.dart';
 import 'package:fruit_market/presentation/resources/util/w/big/add_remove_one.dart';
+import 'package:fruit_market/presentation/resources/util/w/big/code_6.dart';
 import 'package:fruit_market/presentation/resources/util/w/big/fruit_card.dart';
 import 'package:fruit_market/presentation/resources/util/w/big/fruit_card_car.dart';
 import 'package:fruit_market/presentation/resources/util/w/big/fruit_card_fav.dart';
@@ -123,4 +124,8 @@ class UtilM {
 
   static Widget randomLoading({int? index, double? size, Color? clr}) =>
       LoadingAnimationList.randomLoading(index: index, clr: clr, size: size);
+
+  static Widget code6({String text = 'XXXXXX'}) => Code6(
+        text: text,
+      );
 }

@@ -31,8 +31,7 @@ class ConfirmMobileView extends StatelessWidget {
   }
 
   Scaffold myScaffold() => Scaffold(
-        appBar: UtilM.appBar(
-            onBack: () => ViewsManager.backIfUCan(_context)),
+        appBar: UtilM.appBar(onBack: () => ViewsManager.backIfUCan(_context)),
         body: Center(
           child: Padding(
             padding: const EdgeInsets.all(AppPadding.p16),
@@ -91,7 +90,7 @@ class ConfirmMobileView extends StatelessWidget {
 
   void onVerify() {
     // send code and open code confirm view if => (success)
-    _cubit.sendCode(() => ViewsManager.openLoginConfirmCode(_context));
+    _cubit.sendCode(_context);
     // open loading view any way
     ViewsManager.openWBLoginLoading(_context);
   }

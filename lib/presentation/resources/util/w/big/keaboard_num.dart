@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_market/presentation/resources/all_styles.dart';
-import 'package:fruit_market/presentation/resources/color_manager.dart';
 
 class KeyboardNum extends StatelessWidget {
   final void Function(String value) onChange;
@@ -95,7 +94,7 @@ class KeyboardNum extends StatelessWidget {
 
 // =========== voids ============
   void _onNumTap(String num) {
-    if (max != null && _text.length < (max ?? 0)) return;
+    if (max != null && _text.length >= (max ?? 0)) return;
     _text += num;
     _onChange();
   }
