@@ -5,7 +5,7 @@ from <a href="https://www.behance.net/gallery/115391773/Fruit-Market-Online-Deli
 Manish Chutake, Ashish Chutake </a>  💓.
 
 
-<img align="center" src = "https://profile-counter.glitch.me/Flutter-UI-Challenges/count.svg" alt ="Loading">
+<img align="center" src = "https://profile-counter.glitch.me/fruit_market/count.svg" alt ="Loading">
 
 ### Overview
 
@@ -16,7 +16,7 @@ screens and 4 major module and high quality design .
 
 
 ### user flow
-<img src="https://github.com/ahmed4442025/fruit_market/blob/master/screenshots/user_flow.png.png" width="400">
+<img src="https://github.com/ahmed4442025/fruit_market/blob/master/screenshots/user_flow.png">
 
 ## Colors Palette
 
@@ -39,21 +39,23 @@ you can buy your favourite product from your favourite list .
 <img src="https://github.com/ahmed4442025/fruit_market/blob/master/screenshots/favorit.png" width="300">
 
 
-<img src="https://github.com/ahmed4442025/fruit_market/blob/master/screenshots/onboarding.png" width="300">
+<img src="https://github.com/ahmed4442025/fruit_market/blob/master/screenshots/onboarding.png">
 
 ### Home
 Dynamic Home
 In these app the home screens has been shows the maximum products in one screen which can be
 shows multiple types of products which belong to one category .
+
+
 <img src="https://github.com/ahmed4442025/fruit_market/blob/master/screenshots/home.png" width="300">
 
 
 ### Screenshots
-<img src="https://github.com/ahmed4442025/fruit_market/blob/master/screenshots/splash.png" width="400">
+<img src="https://github.com/ahmed4442025/fruit_market/blob/master/screenshots/splash.png" >
 
-<img src="https://github.com/ahmed4442025/fruit_market/blob/master/screenshots/loading.png" width="400">
+<img src="https://github.com/ahmed4442025/fruit_market/blob/master/screenshots/loading.png" >
 
-<img src="https://github.com/ahmed4442025/fruit_market/blob/master/screenshots/login.png" width="400">
+<img src="https://github.com/ahmed4442025/fruit_market/blob/master/screenshots/login.png">
 
-<img src="https://github.com/ahmed4442025/fruit_market/blob/master/screenshots/data.png" width="400">
+<img src="https://github.com/ahmed4442025/fruit_market/blob/master/screenshots/data.png">
 
