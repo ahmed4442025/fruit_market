@@ -33,3 +33,9 @@ class tempPage extends StatelessWidget {
                 child: Text('back on boarding'))),
       );
 }
+
+
+class test {
+  static TextStyle blueText({Color color = Colors.blue}) =>
+      TextStyle(color: color);
+}

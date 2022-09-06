@@ -1,16 +1,59 @@
-# fruit_market
+# Fruit Market 🔥 💫 ⭐️ 👨‍ 💻 ⭐️ 🔥
 
-A new Flutter project.
+Free Flutter UI Kits based on designs
+from <a href="https://www.behance.net/gallery/115391773/Fruit-Market-Online-Delivery-App-UI-kit">
+Manish Chutake, Ashish Chutake </a>  💓.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+<img align="center" src = "https://profile-counter.glitch.me/Flutter-UI-Challenges/count.svg" alt ="Loading">
 
-A few resources to get you started if this is your first Flutter project:
+### Overview
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Fruit shop is the combination of providing multiple types of Fruits , Vegetables and Dry fruits can
+contain detail information about the product and also gives information about the product contain
+minerals and vitamins which can be important to the body . In these app contains more than 32
+screens and 4 major module and high quality design .
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+### user flow
+<img src="https://github.com/ahmed4442025/fruit_market/blob/master/screenshots/user_flow.png.png" width="400">
+
+## Colors Palette
+
+<img src="https://github.com/ahmed4442025/fruit_market/blob/master/screenshots/colors.png" >
+
+## Features
+
+### Product Details
+
+This app provides the product which can you buy this app gives detail information about the product
+and also gives the information about the product contains minerals and vitamins which can be
+important to the human body .
+
+<img src="https://github.com/ahmed4442025/fruit_market/blob/master/screenshots/product_details.png" width="400">
+
+### Favourites
+In this app the special feature IS you can add your favourite item in your favourite list and
+you can buy your favourite product from your favourite list .
+
+<img src="https://github.com/ahmed4442025/fruit_market/blob/master/screenshots/favorit.png" width="300">
+
+
+<img src="https://github.com/ahmed4442025/fruit_market/blob/master/screenshots/onboarding.png" width="300">
+
+### Home
+Dynamic Home
+In these app the home screens has been shows the maximum products in one screen which can be
+shows multiple types of products which belong to one category .
+<img src="https://github.com/ahmed4442025/fruit_market/blob/master/screenshots/home.png" width="300">
+
+
+### Screenshots
+<img src="https://github.com/ahmed4442025/fruit_market/blob/master/screenshots/splash.png" width="400">
+
+<img src="https://github.com/ahmed4442025/fruit_market/blob/master/screenshots/loading.png" width="400">
+
+<img src="https://github.com/ahmed4442025/fruit_market/blob/master/screenshots/login.png" width="400">
+
+<img src="https://github.com/ahmed4442025/fruit_market/blob/master/screenshots/data.png" width="400">
+

@@ -34,7 +34,7 @@ class ConfirmCodeView extends StatelessWidget {
                 children: [
                   UtilM.box20(),
                   const Text(
-                      "Enter The 4 digit code that was\nsend to your Mobile Number"),
+                      "Enter The 6 digit code that was\nsend to your Mobile Number"),
                   Padding(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 30, vertical: 20),

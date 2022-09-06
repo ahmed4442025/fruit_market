@@ -58,6 +58,7 @@ class ViewsManager {
   static void openWBLoginLoading(context) {
     _openViewWithBack(context, Routes.loginCLoading);
   }
+
   // ============ End login ============
 
   // ============ settings ============
@@ -96,7 +97,8 @@ class ViewsManager {
 
   // ==========
   static void _openViewNoBack(context, nextPage) {
-    Navigator.pushReplacementNamed(context, nextPage);
+    // Navigator.pushReplacementNamed(context, nextPage);
+    Navigator.of(context).pushNamedAndRemoveUntil(nextPage, (route) => false);
   }
 
   static void _openViewWithBack(context, nextPage) {
